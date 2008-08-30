@@ -1,0 +1,131 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>XHTML live chat based on the XMLHttpRequest Object</title>
+  <meta name="Author" content="Alexander Kohlhofer" />
+  <link href="default.css" rel="stylesheet" type="text/css" />
+	<script src="scripts.js" language="JavaScript" type="text/javascript"></script>
+	<!--
+
+	
+	XHTML live Chat
+	author: alexander kohlhofer
+ 	version: 1.0
+ 	http://www.plasticshore.com
+ 	http://www.plasticshore.com/projects/chat/
+ 	please let the author know if you put any of this to use
+ 	XHTML live Chat (including this html code) is published under a creative commons license
+ 	license: http://creativecommons.org/licenses/by-nc-sa/2.0/
+
+ 	
+	-->
+</head>
+<body>
+<div id="weewarCorner" style="position:absolute; top:0px; right:0px; z-index:99;"><a href="http://weewar.com?referrer=alex" title="Have a little war at Weewar.com"><img style="border-width:0px;" src="http://blog.weewar.com/images/weewar_corner_1.gif" width="75px" height="101px" alt="weewar.com corner"/></a></div>
+  <div id="header">
+      <!-- google_ad_section_start -->
+    <div id="credit">
+      <h1>XHTML live Chat</h1>
+      <p>by alexander kohlhofer<br />
+      <a href="http://plasticshore.com" title="visit the plasticshore">plasticshore.com</a></p>
+    </div>
+    <h2>chat input</h2>
+    <form id="chatForm" name="chatForm" onsubmit="return false;" action="">
+      <label for="name">your name:</label><input type="text" size="12" maxlength="30" name="name" id="name" onblur="checkName();" /> <label for="chatbarText">your message:</label> <input type="text" size="55" maxlength="500" name="chatbarText" id="chatbarText" onblur="checkStatus('');" onfocus="checkStatus('active');" /> <input onclick="sendComment();" type="submit" id="submit" name="submit" value="submit" />
+    </form>
+  </div>
+  <div id="content">
+    <div id="description">
+      <h2>Description</h2>
+      <h3>XHTML live Chat based on the XMLHttpRequest Object (ajax)</h3>
+      <p>Please consider this a proof of concept rather then a tested real world solution. I am happy for anybody use and develop this further.</p>
+      <p>View the original <a href="http://old.plasticshore.com/2.html#entry_481" title="go to the original posting">announcement</a>. The sources are available for <a href="http://chat.plasticshore.com/ajaxchat.zip">download here</a> (zip archive).</p>
+      
+            <h3>Supported by</h3>
+      
+      <script type="text/javascript"><!--
+		google_ad_client = "pub-9650076642955876";
+		google_alternate_color = "567B9B";
+		google_ad_width = 160;
+		google_ad_height = 600;
+		google_ad_format = "160x600_as";
+		google_ad_type = "text";
+		google_ad_channel ="";
+		google_color_border = "567B9B";
+		google_color_bg = "567B9B";
+		google_color_link = "FFD039";
+		google_color_url = "FFFFFF";
+		google_color_text = "567B9B";
+		//--></script>
+		<script type="text/javascript"
+		  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+      
+      <h3>Known issues</h3>
+      <p>Works in latest IE(win), Firefox and Safari. IE does not support the png image format. Omniweb is currently read only.</p>
+      <p>Older/other Browsers might not like it at all and I have not build in any means to catch those (or have this chat degrade gracefully).</p>
+      <p>As a chat it would be more intuitive if the layout was following the usual chat scheme: input at the bottom, history moving upwards.</p>
+      <p>The frequent update cycles should be intelligent (i.e. slow down if nothing has changed or switch into a pause mode)</p>
+      <h3>Where do we go from here?</h3>
+      <p>Apart from this being a chat I can think of some more (even more useful?) applications:</p>
+      <ul>
+        <li>An advanced comment function for blogs offering immediate communication between users.</li>
+        <li>An advanced shoutbox.</li>
+        <li>A live single/multi-user publishing system.</li>
+        <li>A XHTML Broadcasting tool for live coverage of events.</li>
+      </ul>
+      <p>All of these could degrade gracefully if javascript is not available!</p>
+      
+      <h3>Credits</h3>
+      <p>I have used the following resources:</p>
+      <ul>
+        <li><a href="http://www.webpasties.com/xmlHttpRequest" title="baby steps to XMLHttpRequest">Guide to Using XMLHttpRequest (with Baby Steps)</a><br />
+        Providing all you need to know about XMLHttpRequest.</li>
+        <li><a href="http://www.onlinetools.org/articles/unobtrusivejavascript" title="Unobtrusive Javascript">Unobtrusive Javascript</a><br />
+        Got me started on the whole javascript thing.</li>
+      </ul>
+      <h3>Creative Commons License</h3>
+            <p>This web site (including XHTML, CSS, Javascript, PHP, all images), unless otherwise noted, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons License</a>.</p>
+            <!-- /Creative Commons License -->
+<!--
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Interactive" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+--> 
+
+
+<p>valid <a href="http://validator.w3.org/check?uri=referer">XHTML</a></p>
+    </div>
+    <div id="chatoutput">
+    
+      <h2>chat output</h2>
+      
+      <ul id="outputList">
+        <li><span class="name">plasticshore chat:</span>welcome</li>
+      </ul>
+
+    </div>
+  </div>
+		
+</body>
+</html>
