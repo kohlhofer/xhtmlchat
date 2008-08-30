@@ -1,6 +1,6 @@
 XHTML live Chat
 by alexander kohlhofer
-http://www.plasticshore.com
+http://plasticshore.com
 
 VERSION: 1.1
 demo: http://chat.plasticshore.com
