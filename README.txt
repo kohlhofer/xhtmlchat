@@ -2,12 +2,13 @@ XHTML live Chat
 by alexander kohlhofer
 http://www.plasticshore.com
 
-http://chat.plasticshore.com/
+
 version: 1.1
+demo: http://chat.plasticshore.com
+For feedback, suggestions and requests: http://nokahuna.com/projects/1091
 
 XHTML live Chat is published under a creative commons license
-The license can be found at http://creativecommons.org/licenses/by-nc-sa/2.0/
-
+The license can be found at http://creativecommons.org/licenses/by-nc-sa/2.0
 
 
 Feel free to look at, alter and build upon this project. 
