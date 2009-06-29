@@ -18,7 +18,7 @@ http://chat.plasticshore.com/
 
 HOW TO:
 
-XHTMLChat required PHP and mySQL. Adjust db.php with you mySQL credentials. Then run initBD.php. After this you should be able to chat away at index.html.
+XHTMLChat requires only PHP and mySQL. Adjust db.php with you mySQL credentials. Then run initBD.php. After this you should be able to chat away at index.html.
 
 
 LICENSE:
